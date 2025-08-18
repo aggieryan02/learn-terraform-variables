@@ -9,12 +9,12 @@ data "aws_availability_zones" "available" {
 }
 
 terraform {
-  cloud {
+ /* cloud {
     organization = "policy-as-code-training"
     workspaces {
       name = "tf-vault-qa-rt"
     }
-  }
+  }  */
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -42,7 +42,7 @@ module "vpc" {
 
   tags = {
     project     = "project-alpha",
-    environment = "dev"
+    environment = "development"
   }
 }
 
@@ -58,7 +58,7 @@ module "app_security_group" {
 
   tags = {
     project     = "project-alpha",
-    environment = "dev"
+    environment = "development"
   }
 }
 
@@ -74,7 +74,7 @@ module "lb_security_group" {
 
   tags = {
     project     = "project-alpha",
-    environment = "dev"
+    environment = "development"
   }
 }
 
@@ -115,7 +115,7 @@ module "elb_http" {
 
   tags = {
     project     = "project-alpha",
-    environment = "dev"
+    environment = "development"
   }
 }
 
@@ -133,7 +133,7 @@ instance_count = var.instance_count
 
   tags = {
     project     = "project-alpha",
-    environment = "dev"
+    environment = "development"
   }
 }
 
