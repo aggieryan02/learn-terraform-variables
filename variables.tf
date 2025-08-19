@@ -10,7 +10,7 @@ variable "instance_count" {
 }
 
 module "s3_bucket" {
-  source  = "app.terraform.io/<YOUR_ORG>/s3-bucket-rt/aws"
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-rt/aws"
   version = "1.0.0"
   bucket_name = "my-bucket"
 }
