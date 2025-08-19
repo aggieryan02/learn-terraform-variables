@@ -28,3 +28,10 @@ resource "aws_instance" "app" {
 
   tags = var.tags
 }
+
+
+module "s3_bucket" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-rt/aws"
+  version = "1.0.0"
+  bucket_name = "my-bucket_rt123"
+}
